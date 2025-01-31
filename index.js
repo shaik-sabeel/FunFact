@@ -122,6 +122,12 @@ document.querySelector("button").addEventListener("click",function(){
     var randNo = Math.floor((Math.random() * len) + 1);
     randFact = funFacts[randNo];
     document.querySelector("h2").innerHTML = randFact;
+    gsap.from("#fact",{
+        y:20,
+        opacity:0,
+        scale:0.5,
+        duration:0.5,
+    })
 });
 
 
@@ -145,6 +151,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+gsap.from("h1.h1",{
+    y:-30,
+    duration:1,
+    delay:2,
+})
 
 gsap.from("h1",{
     y:-30,
@@ -182,3 +193,19 @@ nav.from("#name",{
     duration:0.5,
     stagger:0.3
 })
+
+
+gsap.from(".span",{
+    y:-30,
+    opacity:0,
+    delay:1,
+    duration:1.5
+})
+
+
+// gsap.from("button",{
+//     y:100,
+//     opacity:0.5,
+//     duration:1,
+//     delay:0.3
+// })
